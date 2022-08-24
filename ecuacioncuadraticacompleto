@@ -1,0 +1,31 @@
+#include"stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main()
+{
+   float a,b,c,x1,x2,r;
+   cout<<"Ingrese valor para a: ";
+   cin>>a;
+   if(a!=0)
+   {
+       cout<<"Ingrese valor para b: ";
+       cin>>b;
+       cout<<"Ingrese valor para c: ";
+       cin>>c;
+       r=(pow(b,2)-4*a*c);
+       if(r>0)
+       {
+           x1=(-b+sqrt(r))/(2*a);
+           x2=(-b-sqrt(r))/(2*a);
+           cout<<"El resultado de x1 es: "<<x1<<"+"<<x2<<"i"<<endl;
+           cout<<"El resultado de x2 es: "<<x2<<"-"<<x2<<"i"<<endl;
+       }
+       else 
+        cout<<"x1= "<<(-b/2*a);
+        getch();
+       
+   }
+}

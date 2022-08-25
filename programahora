@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int h,m,s,segundos,minutos,diario,total,horapm,h2,m2;
+   cout<<"Introduzca las horas"<<endl;
+   cin>>h;
+   cout<<"Introduzca los minutos"<<endl;
+   cin>>m;
+   cout<<"Introduzca los segundos"<<endl;
+   cin>>s;
+   segundos=h*3600;
+   minutos=m*60;
+   total=segundos+minutos+s;
+   diario=43200;
+   if(total<diario)
+   cout<<h<<":"<<m<<":"<<s<<"am"<<endl;
+   if(total>diario)
+   horapm=total*diario;
+   h2=horapm/3600;
+   horapm %=3600;
+   m2=horapm/60;
+   horapm %=60;
+   cout<<h2<<":"<<m2<<":"<<horapm<<"pm"<<endl;
+
+   return 0;
+
+}

@@ -1,0 +1,79 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int main()
+{
+	float a,b,c,P,F,parciales,examenfinal,proyectofinal,notafinal,notafinal1,notafinal2,notafinal3,may,men,promedio;
+	cout<<"ingrese la nota del primer parcial del primmer estudiante" <<endl;
+	cin>>a;
+	cout<<"ingrese la nota del segundo parcial del primmer estudiante" <<endl;
+	cin>>b;
+	cout<<"ingrese la nota del tercer parcial del primmer estudiante" <<endl;
+	cin>>c;
+	cout<<"ingrese la nota del examen final del primmer estudiante" <<endl;
+	cin>>F;
+	cout<<"ingrese la nota del proyecto final del primmer estudiante" <<endl;
+	cin>>P;
+	parciales=((a+b+c)/3)*0.40;
+	examenfinal=P*0.40;
+	proyectofinal=F*0.20;
+	notafinal1=parciales+examenfinal+proyectofinal;
+	cout<<"La nota final del pirmer estudiante es: "<<notafinal1<<endl;
+
+	cout<<"ingrese la nota del primer parcial del segundo estudiante" <<endl;
+	cin>>a;
+	cout<<"ingrese la nota del segundo parcial del segundo  estudiante" <<endl;
+	cin>>b;
+	cout<<"ingrese la nota del tercer parcial del segundo  estudiante" <<endl;
+	cin>>c;
+	cout<<"ingrese la nota del examen final del segundo  estudiante" <<endl;
+	cin>>F;
+	cout<<"ingrese la nota del proyecto final del segundo  estudiante" <<endl;
+	cin>>P;
+	parciales=((a+b+c)/3)*0.40;
+	examenfinal=P*0.40;
+	proyectofinal=F*0.20;
+	notafinal2=parciales+examenfinal+proyectofinal;
+	cout<<"La nota final del segundo estudiante es: "<<notafinal2<<endl;
+
+	cout<<"ingrese la nota del primer parcial del tercer estudiante" <<endl;
+	cin>>a;
+	cout<<"ingrese la nota del segundo parcial del  tercer estudiante" <<endl;
+	cin>>b;
+	cout<<"ingrese la nota del tercer parcial del tercer  estudiante" <<endl;
+	cin>>c;
+	cout<<"ingrese la nota del examen final del tercer  estudiante" <<endl;
+	cin>>F;
+	cout<<"ingrese la nota del proyecto final del tercer  estudiante" <<endl;
+	cin>>P;
+	parciales=((a+b+c)/3)*0.40;
+	examenfinal=P*0.40;
+	proyectofinal=F*0.20;
+	notafinal3=parciales+examenfinal+proyectofinal;
+	cout<<"La nota final del tercer estudiante es: "<<notafinal3<<endl;
+
+	notafinal=(notafinal1+notafinal2+notafinal3)/3;
+	cout<<"La nota final de los 3 estudiantes es: "<<notafinal<<endl<<endl;
+
+	promedio=(notafinal1+notafinal2+notafinal3)/3;
+	cout<<"El promedio de los 3 estudinates es: "<<promedio<<endl<<endl;
+
+	may=notafinal1;
+	men=notafinal1;
+	
+	if(may<notafinal2)
+		may=notafinal2;
+	if(men>notafinal2)
+		men=notafinal2;
+	if(may<notafinal3)
+		may=notafinal3;
+	if(men>notafinal3)
+		men=notafinal3;
+	cout<<"La nota mayor de los 3 estudiantes es: "<<may<<endl;
+	cout<<"La nopta menor de los 3 estudiantes es: "<<men<<endl;
+	getch();
+}

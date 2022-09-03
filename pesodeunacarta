@@ -1,0 +1,50 @@
+#include <iostream>
+#include "conio.h"
+//#include "stdafx.h"
+
+using namespace std;
+
+int main()
+{
+    float P,C;
+    
+        
+    cout<<"Introducir el peso de la carta: P"<<endl;
+    cin>>P;
+    if (P>500)
+       {
+         cout<<"No puede enviar como carta";
+       }
+    else { if (P>350)
+             {C=15;
+             }
+           else
+             { if (P>200)
+                { C=10.5;
+                
+                }
+                else
+                { if (P>100)
+                    {
+                      C=6;
+                    }
+                    else
+                    { if (P>50)
+                       {
+                          C=4; 
+                       }
+                        else
+                        { C=1.5;
+                        }    
+                    }
+                }
+             }
+            cout<<"El valor de la carta es: "<<C;
+         }
+         
+    
+       getch();
+        
+         
+    return 0;
+}

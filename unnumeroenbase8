@@ -1,0 +1,39 @@
+// Crear una funcion que determina si un numero esta en base 8. Ej 743 si todos los digitos 0-7
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "math.h"
+
+
+using namespace std;
+//declarar el prototipo de la funcion
+bool base8(int numero);
+
+void main()
+{
+	int num;
+	cout<<"Ingrese el numero; ";
+	cin >>num;
+	if (base8(num)==true)
+		cout<<"No esta en base 8";
+	else
+		cout<<"Esta en base 8";
+	getch();
+}
+
+//declarar la funcion
+bool base8(int numero)
+{
+	int d;
+	bool band=false;//ejemplo del uso de la bandera
+	while (numero>0){
+		d=numero%10;
+		numero=numero/10;
+		if ((d<0)||(d>=8)) { // || es OR
+			band=true;
+			break;
+		}
+	}
+	return band;
+}

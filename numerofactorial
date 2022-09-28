@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "math.h"
+
+
+using namespace std;
+
+int factorial (int n);
+
+void main()
+{
+	int N;
+	cout<<"Ingrese el valor de N";
+	cin>>N;
+	cout<<"El factorial del numero N es :"<<factorial(N);
+	getch();
+}
+
+int factorial (int n)
+{
+	int prod=1;
+	for(int i=2;i<=n;i++)
+		prod=prod*i;
+	return prod;
+
+}
+

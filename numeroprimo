@@ -1,0 +1,40 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+//prototipo de la funcion
+bool primoono(int a);
+
+void main()
+{
+	int i=2,k=0,valor;//ilos numeros consecutivos (1.2.3).k me va conando primos voy encontrando.
+	cout<<"Ingrese la cantidad de numeros"<<endl;
+	cin>>valor;
+	
+	cout<<"Los "<<valor<<"numeros primos son:"<<endl;
+	while(k<valor)
+	{
+		if (primoono(i)==true)
+		{
+			cout<<i<<",";
+	        k++;
+	    }
+	    i++;
+    }
+    getch();
+}
+
+bool primoono(int a)
+{
+	bool aux=true;
+	for(int i=2;i<=a-1;i++)
+	    if(a%i==0)
+		{
+			aux=false;
+			break;
+		}
+		return aux;
+}

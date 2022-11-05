@@ -1,0 +1,35 @@
+//MARIA JOSE MARISCAL TABORGA
+// ejercicio 7
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+float fac(float n);
+float combi(float n, float r);
+
+int main()
+{
+    int n,r;
+    cout<<"ingrese n:";
+    cin>>n;
+    cout<<"ingrese r:";
+    cin>>r;
+    cout<<"Muestre la funcion combi:"<<combi(n,r)<<endl;
+
+    return 0;
+}
+
+
+float fac (float n) {
+    float f=1;
+    for (int i=1;i<=n;i++)
+         f=f*i;
+    return f;
+}
+float combi(float n, float r){  
+    
+    float aux;
+    aux= fac(n)/(fac(r)*fac(n-r));
+    return aux;
+}
